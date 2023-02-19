@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { socials } from '../constants';
 import styles from '../styles';
 import { footerVariants } from '../utils/motion';
@@ -12,38 +13,43 @@ const Footer = () => (
     variants={footerVariants}
     initial='hidden'
     whileInView="show"
-    className={`${styles.paddings} py-8 relative`}>
+    className={`bg-[url('/banner.png')]  bg-no-repeat bg-cover px-10 py-10`}>
     
-    <div className="footer-gradient"/>
-
-    <div className={`${styles.innerWidth} mx-auto flex flex-col gap-4`}>
-        <div className="flex items-center justify-between flex-wrap gap-5 ">
-          <h4 className='text-white font-bold text-[35px] md:text-[54px]'>Enter the Metaverse</h4>
-          <button type='button'
-            className='flex items-center h-fit py-4 px-6 bg-[#25618b] hover:bg-[#173c57] rounded-[32px] gap-[12px]'>
-              <img src="/headset.svg" alt="" className="w-[24px] h-[24px] object-contain " />
-
-              <span className="font-normal text-[16px] text-white ">Enter The Metaverse </span>
-          </button> 
-        </div>
-
-        <div className="flex flex-col"></div>
-        <div className='mb-[50px] h-[2px] bg-white opacity-10'/>
-
-        <div className="flex justify-between items-center flex-wrap gap-4">
-          <h4 className="font-extrabold text-[24px] text-white ">Metavarsus</h4>
-          <p className="font-normal text-[14px] text-white opacity-50">
-            Copyright @ 2022 - 2023 Metavwesus. All rights reserved.
-          </p>
-
-          <div className="flex gap-4">
-            {socials.map((social, index) => (
-              <img src={social.url} key='index' alt=""
-              className='w-[24px] h-[24px] object-contain cursor-pointer ' />
-            ))}
+      <div className="md:flex justify-between space-y-8">
+          <div className="">
+              
+              <img src='logo.png' alt="" className='bg-white rounded-md' />
+              <p className='text-white'>School of science</p>
           </div>
-        </div>
-    </div>
+
+          <div className="text-white ">
+              <h3>QUICK LINK</h3>
+              <p><Link href="#">Home</Link></p>
+              <p><Link href="#">Abstract Submission</Link></p>
+              <p><Link href="#">Home</Link></p>
+          </div>
+
+          <div className="text-white ">
+              <h3>QUICK LINK</h3>
+              <p><Link href="#">Home</Link></p>
+              <p><Link href="#">Abstract Submission</Link></p>
+              <p><Link href="#">Home</Link></p>
+          </div>
+
+
+          <div className="text-white space-y-6">
+              <h3>SOCIAL</h3>
+              <div className="flex gap-4">
+              {socials.map((item, index) => (
+                <p key={index}>  <Link href="#"> <img src={item.url} alt="" /> </Link></p>
+              ))}
+              </div>
+              <p>Visits: 2925</p>
+              
+          </div>
+      </div>
+
+      <p className='my-[30px] text-center text-white'>Copyright © 2023 - Department Of Computer Science - Gateway ICT Polytechnic</p>
   </motion.footer>
 );
 

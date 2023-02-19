@@ -1,0 +1,5 @@
+
+export const  data = {
+    announcement : 'The Faculty of Science, University of Ibadan is pleased to announce her 5th International Conference on Scientific Research, scheduled to be held from 2nd - 5th May, 2023 at the Faculty of Science Lakeside Lecture Theater, University of Ibadan. The theme for this conference is "Strengthening Scientific Research for National Development". The objective of this conference is to promote the international and interdisciplinary exchange of scientific information among scientists in academia, research institutes, and industries. Highlights of the conference will include Keynotes and Plenary Sessions, Technical Sessions, Panel Sessions, Exhibition, Women Scientists Session, Excursion, Luncheons/Dinners and Awards. It is expected that the scientific ideas to be shared at this conference will be found helpful to the policy makers towards national development. This invitation is open to researchers, policy makers, and individuals with a keen interest in how scientific research can be strengthened for national development',
+    
+}

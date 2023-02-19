@@ -1,3 +1,5 @@
+import { Footer, Navbar } from '../components';
+import { Hero } from '../sections';
 import '../styles/globals.css';
 
 const RootLayout = ({ children }) => (
@@ -6,7 +8,11 @@ const RootLayout = ({ children }) => (
       <link rel="preconnect" href="https://stijndv.com" />
       <link rel="stylesheet" href="https://stijndv.com/fonts/Eudoxus-Sans.css" />
     </head>
-    <body >{children}</body>
+    <body >
+    <Navbar />
+      {children}
+    <Footer />
+    </body>
   </html>
 );
 

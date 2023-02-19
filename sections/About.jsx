@@ -1,28 +1,31 @@
 'use client';
 import { motion } from 'framer-motion';
 import styles from '../styles';
-import { TypingText } from '../components'
+import { TitleText, TypingText } from '../components'
 import { fadeIn, staggerContainer } from '../utils/motion';  
+import { data } from '../constants'
+
 
 
 const About = () => (
   <section className={`${styles.paddings} relative z-10`}>
-    <div className="  gradient-02 z-0" />
-
+    
     <motion.div
       className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}
       variants={staggerContainer}
       initial='hidden'
       whileInView='show'
       viewport={{once:false, amount:0.25}}>
-        <TypingText title='| About Metaversus' textStyles='text-center' />
 
-        <motion.p 
-          variants={fadeIn('up', 'tween', 0.2, 1)}
-          className='mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white'>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse rerum iure ab laborum quas ullam asperiores est consectetur doloremque eligendi!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae placeat earum laudantium suscipit fugiat consequuntur deleniti quisquam ea optio delectus!
-        </motion.p>
+
+      <TitleText title={<>Announcement </>} textStyles='text-center' />
+        
+
+      <motion.p 
+        variants={fadeIn('up', 'tween', 0.2, 1)}
+        className='mt-[8px] font-normal text-[20px] text-justify md:leading-[40px] leading-[30px]  '>
+        {data.announcement}
+      </motion.p>
 
         <motion.img 
           variants={fadeIn('up', 'tween', 0.5, 1)}

@@ -1,46 +1,29 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 import { motion } from 'framer-motion';
-import styles from '../styles';
 import { slideIn, staggerContainer, textVariant } from '../utils/motion';  
 
 const Hero = () => (
-  <section className={`${styles.yPaddings} sm:pl-16 pl-6 container`}>
+  <section className={`  bg-[url('/banner.png')]  bg-no-repeat bg-cover text-white h-[40rem] relative flex flex-col justify-center items-center`}>
+ 
+ 
+
     <motion.div
       variants={staggerContainer}
       initial='hidden'
       whileInView="show"
       viewport={{once:false, amount:0.25}}
-      className={`${styles.innerWidth} mx-10 flex justify-center items-center flex-col relative z-10`}>
-         
-         <motion.h1 variants={textVariant(1.1)}
-          className={styles.heroHeading}>
-            Metaverse
-         </motion.h1>
+      className=''>
+          
 
-         <motion.div variants={textVariant(1.2)}
-          className='flex flex-row justify-center items-center z-30 '>
-            <h1 className={styles.heroHeading}>MA</h1>
-            <div className={styles.heroDText}/>
-            <h1 className={styles.heroHeading}>ness</h1>
-         </motion.div>
-
-         <motion.div
-          variants={slideIn('right', 'tween', 0.2, 1)}
-          className='relative w-full md:-mt-[20px] -mt-[12px]'>
-                <div className="absolute w-full h-[300px] hero-gradient  rounded-tl-[140px] z-[0] -top-[30px]"/>
-                    <img src="/cover.png" alt="" 
-                      className="w-full sm:h-[500px] z-10 h-[350px] object-cover rounded-tl-[140px] relative" /> 
-                    <a href="#explore">
-                      <div className="w-full flex justify-end sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10">
-                        <img 
-                            src='/stamp.png'
-                            alt=''
-                            className='sm:w-[115px] w-[100px] sm:h-[155px] h-[100px] object-contain' />
-                      </div>
-                    </a>
-              
-         </motion.div>
+      <div className="px-5">
+        <h1 className=' font-sans uppercase font-bold text-[25px] md:text-[38px] text-center'>school of science gateway ict polytechnic <br /> INTERNATIONAL CONFERENCE ON</h1>
+      
+        <h1 className='text-center text-amber-400 font-extrabold text-[35px] md:text-[68px]'>SCIENTIFIC RESEARCH IN NIGERIA</h1>
+          
+        <h2 className=' font-sans uppercase font-bold text-[20px] mt-5 md:text-[38px] text-center underline'>2 - 5 MAY, 2023.</h2>
+        <h2 className=' font-sans uppercase font-bold text-[20px] md:text-[30px] text-center'>THEME: STRENGTHENING SCIENTIFIC RESEARCH FOR NATIONAL DEVELOPMENT        </h2>
+     </div>
 
     </motion.div>
   </section>
