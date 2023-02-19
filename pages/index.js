@@ -1,4 +1,5 @@
 import React from 'react'
+import { Timer } from '../components'
 import { About, Explore, Hero } from '../sections'
 import Layout from './Layout'
 
@@ -7,7 +8,7 @@ const Index = () => {
     <Layout className=''>
     
         <Hero />
-        
+        <Timer />
         <div className="relative">
         <About />
         <div className=" gradient-03 z-0"/>
