@@ -6,15 +6,13 @@ import Layout from './Layout'
 const Index = () => {
   return (
     <Layout className=''>
-    
+    <div className=" overflow-hidden">
         <Hero />
         <Timer />
-        <div className="relative">
-        <About />
-        <div className=" gradient-03 z-0"/>
-        <Explore />
-        </div>
-    
+       <About />
+       <Explore />
+      
+    </div>
     
     
     
