@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import Paper from '@mui/material/Paper';
 import { Button, FormControl, InputLabel, makeStyles, MenuItem, OutlinedInput, Select, TextField } from '@mui/material'
 
@@ -7,12 +7,39 @@ import { Button, FormControl, InputLabel, makeStyles, MenuItem, OutlinedInput, S
 
 const Form = () => {
 
+  const [user, setUser] = useState({
+    firstName: '',
+    lastName: '',
+    otherName: '',
+    participantType: '',
+    email:"",
+    phone:"",
+    institutionOrganisation: '',
+    department: "",
+    country: "",
+    stateProvince: "",
+    city:''
+
+  })
+
   const countries = ["Algeria", "Argentina", "Australia", "Austria", "Bangladesh", "Belgium", "Brazil", "Canada", "Chile", "China", "Colombia", "Czech Republic", "Denmark", "Egypt", "France", "Germany", "Greece", "India", "Indonesia", "Iran", "Ireland", "Israel", "Italy", "Japan", "Malaysia", "Mexico", "Netherlands", "Nigeria", "Norway", "Pakistan", "Peru", "Philippines", "Poland", "Romania", "Russia", "Saudi Arabia", "Singapore", "South Africa", "South Korea", "Spain", "Sweden", "Switzerland", "Taiwan", "Thailand", "Turkey", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Vietnam"];
+
+  const handleChange = (e) => {
+    e.preventDefault()
+    setUser({...user, [e.target.name]: e.target.value})
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    console.log(user)
+  }
+
 
   return ( 
     <Paper className='w-full md:w-[70%] mx-auto my-10 p-5' elevation={5}>
      
-        <form action="">
+        <form action="" onSubmit={handleSubmit}>
             <h1 className='text-center my-7 font-semibold uppercase text-[24px]'>Register Here</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <TextField
@@ -20,27 +47,30 @@ const Form = () => {
                 type='text'
                 required
                 size='small'
-                value=''
-                name=''
-                placeholder='First Name' />
+                value={user.firstName}
+                name='firstName'
+                placeholder='First Name'
+                onChange={handleChange} />
 
                 <TextField
                 label="Last Name"
                 required
                 type='text'
                 size='small'
-                value=''
-                name=''
-                placeholder='Last Name' />
+                value={user.lastName}
+                name='lastName'
+                placeholder='Last Name'
+                onChange={handleChange} />
 
                 <TextField
                 label="Other Name"
                 type='text'
                 required
                 size='small'
-                value=''
-                name=''
-                placeholder='Other Name' />
+                value={user.otherName}
+                name='otherName'
+                placeholder='Other Name'
+                onChange={handleChange} />
 
 
              
@@ -50,9 +80,10 @@ const Form = () => {
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     input={<OutlinedInput label="Participant Type" />}
-                    value=""
+                    value={user.participantType}
+                    name='participantType'
                     label=""
-                    onChange=''
+                    onChange={handleChange}
                   >
                     <MenuItem value='virtual'>virtual</MenuItem>
                     <MenuItem value='Physical'>Physical</MenuItem>
@@ -64,36 +95,40 @@ const Form = () => {
                 type='email'
                 required
                 size='small'
-                value=''
-                name=''
-                placeholder='Email' />
+                value={user.email}
+                name='email'
+                placeholder='Email'
+                onChange={handleChange} />
 
                 <TextField
                 label="Phone Number"
                 type='text'
                 required
                 size='small'
-                value=''
-                name=''
-                placeholder='Phone Number' />
+                value={user.phone}
+                name='phone'
+                placeholder='Phone Number'
+                onChange={handleChange} />
 
                 <TextField
                 label="Institution / Organisation"
                 type='text'
                 required
                 size='small'
-                value=''
-                name=''
-                placeholder='Institution / Organisation' />
+                value={user.institutionOrganisation}
+                name='institutionOrganisation'
+                placeholder='Institution / Organisation'
+                onChange={handleChange} />
 
                 <TextField
                 label="Department"
                 type='text'
                 required
                 size='small'
-                value=''
-                name=''
-                placeholder='Department' />
+                value={user.department}
+                name='department'
+                placeholder='Department'
+                onChange={handleChange} />
 
                 <FormControl fullWidth>
                   <InputLabel id="demo-simple-select-label">Country</InputLabel>
@@ -101,13 +136,14 @@ const Form = () => {
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     input={<OutlinedInput label="Participant Type" />}
-                    value=""
+                    value={user.country}
+                    name='country'
                     label=""
-                    onChange=''
+                    onChange={handleChange}
                   >
                   {
                     countries.map((item, index) => (
-                      <MenuItem key={index} value='item'>{item}</MenuItem>
+                      <MenuItem key={index} value={item}>{item}</MenuItem>
                     ))
                   }
                     
@@ -121,21 +157,23 @@ const Form = () => {
                 type='text'
                 required
                 size='small'
-                value=''
-                name=''
-                placeholder='State / Province' />
+                value={user.stateProvince}
+                name='stateProvince'
+                placeholder='State / Province'
+                onChange={handleChange} />
 
                 <TextField
                 label="City"
                 type='text'
                 required
                 size='small'
-                value=''
-                name=''
-                placeholder='City' />
+                value={user.city}
+                name='city'
+                placeholder='City'
+                onChange={handleChange} />
               </div>  
 
-              <button className='w-full bg-blue-700 hover:to-blue-500 rounded-sm text-md font-semibold my-6 text-white py-2'>Submit</button>
+              <button type='submit' className='w-full bg-blue-700 hover:to-blue-500 rounded-sm text-md font-semibold my-6 text-white py-2'>Submit</button>
             </form> 
           
     </Paper>
