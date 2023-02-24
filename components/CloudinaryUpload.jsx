@@ -45,8 +45,7 @@ const CloudinaryUpload = () => {
       const data = await response.json();
       setUploadedImage(data.secure_url);
 
-      const {imageLink} = await axios.post('/api/paymentFile', {paymentFileLink: uploadedImage, email:email});
-       // console.log(imageLink)
+      
     } catch (error) {
       console.error(error);
       setError("An error occurred during upload");
@@ -54,7 +53,13 @@ const CloudinaryUpload = () => {
       setUploading(false);
     }
 
-    console.log(uploadedImage)
+    try {
+      const imageLink = await axios.post('/api/paymentFile', {paymentFileLink: uploadedImage, email:email});
+       console.log(imageLink.data.success)
+    } catch (error) {
+      console.log(error)
+    }
+
   };
 
 
