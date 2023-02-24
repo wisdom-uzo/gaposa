@@ -5,19 +5,19 @@ export const  data = {
 
 export const insights = [
   {
-    imgUrl: '/aquaculture.9c12f1cf1b247aa702b8.jpg',
-    title: 'Aquaculture and the Blue Economy',
+    imgUrl: '/ai.jpeg',
+    title: 'Artificial Intelligence',
   },
   {
-    imgUrl: '/medicine.jpeg',
-    title: 'Medicinal plants / Drug development',
+    imgUrl: '/bio.jpeg',
+    title: 'Biotechnology / Bioinformatics',
   },
   {
-    imgUrl: '/climate-change.jpg',
-    title: 'Climatic change and human health',
+    imgUrl: '/nano.jpeg',
+    title: 'Nanotechnology',
   },
   {
-    imgUrl: '/aquaculture.jpg',
+    imgUrl: '/arg.jpeg',
     title: 'Aquaculture and the Blue Economy',
   },
   {
