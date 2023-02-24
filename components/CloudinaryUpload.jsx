@@ -55,7 +55,7 @@ const CloudinaryUpload = () => {
     }
 
     try {
-      const imageLink = await axios.post('/api/paymentFile', {paymentFileLink: uploadedImage, email:email});
+      const imageLink = await axios.post('api/paymentFile', {paymentFileLink: uploadedImage, email:email});
        console.log(imageLink.data.success)
        if(imageLink.data.success){
         toast.success('document has been uploaded')

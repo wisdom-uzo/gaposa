@@ -35,7 +35,7 @@ const Form = () => {
     e.preventDefault()
 
     try {
-      const {data} = await axios.post('/api/user', user);
+      const {data} = await axios.post('api/user', user);
       if(data.success){
         toast.success('datailes has be uploaded')
       }

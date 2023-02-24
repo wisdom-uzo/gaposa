@@ -8,8 +8,8 @@ const clearance = () => {
         <div className="bg-[url('/registration.jpg')] h-[20rem] flex justify-center font-extrabold items-center text-[25px] bg-black text-white">
 
             Clearance
-        </div>
-        
+        </div>  
+          
         <CloudinaryUpload />
         
     </Layout>
