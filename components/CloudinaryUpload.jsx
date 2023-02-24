@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import { CloudinaryContext, Image, Transformation } from '@cloudinary/react'
 import { FormControl, InputLabel, MenuItem, OutlinedInput, Select, TextField } from "@mui/material";
 import axios from "axios";
-
+import { ToastContainer, toast } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css'
 
 const CloudinaryUpload = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -56,6 +57,9 @@ const CloudinaryUpload = () => {
     try {
       const imageLink = await axios.post('/api/paymentFile', {paymentFileLink: uploadedImage, email:email});
        console.log(imageLink.data.success)
+       if(imageLink.data.success){
+        toast.success('document has been uploaded')
+       }
     } catch (error) {
       console.log(error)
     }
@@ -67,7 +71,7 @@ const CloudinaryUpload = () => {
   return (
     <div className="mt-5 flex justify-center flex-col gap-5 px-10">
     
-   
+    <ToastContainer />
     <TextField
       className=""
       label='Email'
