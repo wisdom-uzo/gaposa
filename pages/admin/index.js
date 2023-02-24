@@ -41,7 +41,7 @@ function a11yProps(index) {
 
   
 
-const index = ({user}) => {
+const Index = ({user}) => {
     const [value, setValue] = useState(0);
 
     const handleChange = (event, newValue) => {
@@ -70,7 +70,7 @@ const index = ({user}) => {
   )
 }
 
-export default index
+export default Index
 
 
 
