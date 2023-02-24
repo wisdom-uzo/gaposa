@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 import Paper from '@mui/material/Paper';
 import { Button, FormControl, InputLabel, makeStyles, MenuItem, OutlinedInput, Select, TextField } from '@mui/material'
 import axios from 'axios';
-
+import { ToastContainer, toast } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css'
 
 
 const Form = () => {
@@ -35,7 +36,9 @@ const Form = () => {
 
     try {
       const {data} = await axios.post('/api/user', user);
-      console.log(data)
+      if(data.success){
+        toast.success('datailes has be uploaded')
+      }
     } catch (error) {
       console.log(error)
     }
@@ -181,7 +184,7 @@ const Form = () => {
 
               <button type='submit' className='w-full bg-blue-700 hover:to-blue-500 rounded-sm text-md font-semibold my-6 text-white py-2'>Submit</button>
             </form> 
-          
+<ToastContainer />          
     </Paper>
   )
 }
