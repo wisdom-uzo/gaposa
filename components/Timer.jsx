@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 const CountdownTimer = () => {
   // Set the date to count down to (May 2, 2023)
-  const targetDate = new Date("May 2, 2023 00:00:00").getTime();
+  const targetDate = new Date("april 18, 2023 00:00:00").getTime();
 
   // Initialize the state for the countdown time
   const [countdown, setCountdown] = useState({
@@ -46,17 +46,17 @@ const CountdownTimer = () => {
             <div className=" font-extrabold text-[20px] md:text-[40px]">{countdown.days}</div>
             <p className=" font-semibold text-[16px] md:text-[20px]">Days</p>
         </Paper>
-
+            <div className=" font-extrabold text-[40px]">:</div>
         <Paper className='bg-black w-[5rem] md:w-[7rem] p-3 text-white text-center' elevation={3}>
             <div className=" font-extrabold text-[20px] md:text-[40px]">{countdown.hours}</div>
             <p className=" font-semibold text-[16px] md:text-[20px]">hours</p>
         </Paper>
-
+        <div className=" font-extrabold text-[40px]">:</div>
         <Paper className='bg-black w-[5rem] md:w-[7rem] p-3 text-white text-center' elevation={3}>
             <div className=" font-extrabold text-[20px] md:text-[40px]">{countdown.minutes}</div>
             <p className=" font-semibold text-[16px] md:text-[20px]">minutes</p>
         </Paper>
-
+        <div className=" font-extrabold text-[40px]">:</div>
         <Paper className='bg-black w-[5rem] md:w-[7rem] p-3 text-white text-center' elevation={3}>
             <div className=" font-extrabold text-[20px] md:text-[40px]">{countdown.seconds}</div>
             <p className=" font-semibold text-[16px] md:text-[20px]">seconds</p>

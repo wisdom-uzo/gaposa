@@ -3,6 +3,7 @@ import { TypingText, TitleText } from './CustomTexts'
 import Footer from './Footer';
 import Form from './Form'
 import Timer from './Timer'
+import CloudinaryUpload from './CloudinaryUpload'
 
 export {
   Navbar,
@@ -10,5 +11,6 @@ export {
   TypingText,
   Footer,
   Form,
-  Timer
+  Timer,
+  CloudinaryUpload
 };

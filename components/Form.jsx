@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import Paper from '@mui/material/Paper';
 import { Button, FormControl, InputLabel, makeStyles, MenuItem, OutlinedInput, Select, TextField } from '@mui/material'
+import axios from 'axios';
 
 
 
@@ -29,10 +30,15 @@ const Form = () => {
     setUser({...user, [e.target.name]: e.target.value})
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
-    console.log(user)
+    try {
+      const {data} = await axios.post('/api/user', user);
+      console.log(data)
+    } catch (error) {
+      console.log(error)
+    }
   }
 
 

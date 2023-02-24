@@ -20,7 +20,7 @@ const Explore = () => {
         className={`${styles.innerWidth} mx-auto flex flex-col w-full`}>
 
             
-            <TitleText title={<>Choose the world you want <br className='md:block hidden' /> to explore </>}
+            <TitleText title={<> SUB-THEMES </>}
               textStyles='text-center' />
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

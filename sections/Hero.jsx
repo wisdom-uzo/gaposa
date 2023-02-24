@@ -17,12 +17,13 @@ const Hero = () => (
           
 
       <div className="px-5">
-        <h1 className=' font-sans uppercase font-bold text-[25px] md:text-[38px] text-center'>school of science gateway ict polytechnic <br /> INTERNATIONAL CONFERENCE ON</h1>
-      
-        <h1 className='text-center text-amber-400 font-extrabold text-[35px] md:text-[68px]'>SCIENTIFIC RESEARCH IN NIGERIA</h1>
+        <h1 className=' font-sans uppercase font-bold text-[25px] md:text-[38px] text-center'>school of science gateway ict polytechnic</h1>
+             
+        <h1 className='text-amber-400 text-center font-extrabold text-[35px] md:text-[68px]'>1st INTERNATIONAL CONFERENCE <br /> ON SCIENCE AND TECHNOLOGY</h1>
+       
           
-        <h2 className=' font-sans uppercase font-bold text-[20px] mt-5 md:text-[38px] text-center underline'>2 - 5 MAY, 2023.</h2>
-        <h2 className=' font-sans uppercase font-bold text-[20px] md:text-[30px] text-center'>THEME: STRENGTHENING SCIENTIFIC RESEARCH FOR NATIONAL DEVELOPMENT        </h2>
+        <h2 className=' font-sans uppercase font-bold text-[20px] mt-5 md:text-[38px] text-center underline'>18th-21st April, 2023.</h2>
+        <h2 className=' font-sans uppercase font-bold text-[20px] md:text-[30px] text-center'>THEME: ATTAINING NATIONAL SUSTAINABILITY <br /> THROUGH SCIENCE AND TECHNOLOGY       </h2>
      </div>
 
     </motion.div>

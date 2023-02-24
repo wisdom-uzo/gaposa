@@ -1,7 +1,7 @@
 import React from 'react'
 import { Timer } from '../components'
-import { About, Explore, Hero } from '../sections'
-import Layout from './Layout'
+import { About, Explore, Hero, Layout } from '../sections'
+
 
 const Index = () => {
   return (
