@@ -49,7 +49,7 @@ const Footer = () => (
           </div>
       </div>
 
-      <p className='my-[30px] text-center text-white'>Copyright © 2023 - Department Of Computer Science - Gateway ICT Polytechnic</p>
+      <p className='my-[30px] text-center text-white'>Copyright © 2023 - GcrownITsolution</p>
   </motion.footer>
 );
 
