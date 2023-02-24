@@ -17,9 +17,9 @@ const Hero = () => (
           
 
       <div className="px-5">
-        <h1 className=' font-sans uppercase font-bold text-[25px] md:text-[38px] text-center'>school of science gateway ict polytechnic</h1>
+        <h1 className=' font-sans uppercase font-bold text-[25px] md:text-[38px] text-center'>school of science <br /> gateway (ict) polytechnic saapade</h1>
              
-        <h1 className='text-amber-400 text-center font-extrabold text-[35px] md:text-[68px]'>1st INTERNATIONAL CONFERENCE <br /> ON SCIENCE AND TECHNOLOGY</h1>
+        <h1 className='text-amber-400 text-center font-extrabold text-[30px] md:text-[58px]'>1st INTERNATIONAL CONFERENCE <br /> ON SCIENCE AND TECHNOLOGY</h1>
        
           
         <h2 className=' font-sans uppercase font-bold text-[20px] mt-5 md:text-[38px] text-center underline'>18th-21st April, 2023.</h2>

@@ -5,6 +5,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import { UserTable } from '../../sections';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -19,7 +20,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          <div>{children}</div>
         </Box>
       )}
     </div>
@@ -58,7 +59,7 @@ const Index = ({user}) => {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        Item One
+         <UserTable user={user} />
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two
@@ -80,9 +81,10 @@ export const getServerSideProps = async ({req, res}) => {
 
   
  const {data} = await axios.get(`http://localhost:3000/api/user`)
+ const imagefile = await axios.get(`http://localhost:3000/api/paymentFile`)
   
 	
-
+console.log(imagefile.data.data)
 	return {
 		props: {
 			user: data.data
