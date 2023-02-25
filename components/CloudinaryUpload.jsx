@@ -47,6 +47,13 @@ const CloudinaryUpload = () => {
       const data = await response.json();
       setUploadedImage(data.secure_url);
 
+      const imageLink = await axios.post('api/paymentFile', {paymentFileLink: data.secure_url, email:email});
+       
+       if(imageLink.data.success){
+        toast.success('document has been uploaded')
+        setSuccess('Document upload')
+        return
+       }
       
     } catch (error) {
       console.error(error);
@@ -55,19 +62,19 @@ const CloudinaryUpload = () => {
       setUploading(false);
     }
 
-    try {
-      const imageLink = await axios.post('api/paymentFile', {paymentFileLink: uploadedImage, email:email});
-       console.log(imageLink.data.success)
-       if(imageLink.data.success){
-        toast.success('document has been uploaded')
-        setSuccess('Document upload')
-        return
-       }
+    // try {
+    //   const imageLink = await axios.post('api/paymentFile', {paymentFileLink: uploadedImage, email:email});
+    //    console.log(imageLink.data.success)
+    //    if(imageLink.data.success){
+    //     toast.success('document has been uploaded')
+    //     setSuccess('Document upload')
+    //     return
+    //    }
 
-       setError('something went wrong, load the image again')
-    } catch (error) {
-      console.log(error)
-    }
+    //    setError('something went wrong, load the image again')
+    // } catch (error) {
+    //   console.log(error)
+    // }
 
   };
 
@@ -116,8 +123,7 @@ const CloudinaryUpload = () => {
               className="w-full mt-2 appearance-none border border-gray-300 py-2 px-4 bg-white rounded-lg shadow-sm text-sm leading-5 focus:outline-none focus:ring focus:ring-blue-500 focus:border-blue-500"
             />
             {error && <p style={{ color: "red" }}>{error}</p>}
-            <button onClick={handleUploadClick}>Upload</button>
-            {uploading && <p>Uploading...</p>}
+            
               
         </div> 
         )
