@@ -9,6 +9,8 @@ import 'react-toastify/dist/ReactToastify.css'
 
 const Form = () => {
 
+  const [massage, setMassate] =  useState(null)
+  const [loading, setLoading] = useState(false)
   const [user, setUser] = useState({
     firstName: '',
     lastName: '',
@@ -33,11 +35,13 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    setLoading(true)
 
     try {
       const {data} = await axios.post('api/user', user);
       if(data.success){
         toast.success('datailes has be uploaded')
+        setMassate('your information has be submited ')
       }
     } catch (error) {
       console.log(error)
@@ -181,10 +185,12 @@ const Form = () => {
                 placeholder='City'
                 onChange={handleChange} />
               </div>  
-
-              <button type='submit' className='w-full bg-blue-700 hover:to-blue-500 rounded-sm text-md font-semibold my-6 text-white py-2'>Submit</button>
+                  {massage ? ( <button type='submit' className='w-full bg-green-700 hover:to-blue-500 rounded-sm text-md font-semibold my-6 text-white py-2' disabled>Your information has been submitted</button>
+                  ) : (
+                    <button type='submit' className='w-full bg-blue-700 hover:to-blue-500 rounded-sm text-md font-semibold my-6 text-white py-2'>{loading ? 'loading...' : 'Submit'}</button>
+                  )}
             </form> 
-<ToastContainer />          
+          <ToastContainer />          
     </Paper>
   )
 }

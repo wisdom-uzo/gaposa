@@ -11,10 +11,11 @@ const CloudinaryUpload = () => {
   const [uploadedImage, setUploadedImage] = useState(null);
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null)
 
   const [submissonType, setSubmissonType] = useState('Registration')
   const [email, setEmail] = useState('')
-
+  
   const handleFileInputChange = (event) => {
     const file = event.target.files[0];
     if (file.size > 5000000) { // 5 MB
@@ -34,7 +35,7 @@ const CloudinaryUpload = () => {
     const formData = new FormData();
     formData.append("file", selectedFile);
     formData.append("upload_preset", "confr-img");
-    formData.append("public_id", email); 
+    formData.append("public_id", `${email}${new Date().getMilliseconds()}${new Date().getMinutes()}`); 
     try {
       const response = await fetch(
         "https://api.cloudinary.com/v1_1/dkukvhd6b/image/upload",
@@ -59,7 +60,11 @@ const CloudinaryUpload = () => {
        console.log(imageLink.data.success)
        if(imageLink.data.success){
         toast.success('document has been uploaded')
+        setSuccess('Document upload')
+        return
        }
+
+       setError('something went wrong, load the image again')
     } catch (error) {
       console.log(error)
     }
@@ -103,6 +108,7 @@ const CloudinaryUpload = () => {
         submissonType === 'Registration' && (
           <div className="">
             <p>Evidence of Payment</p>
+            <p>Click here to upload your evidence of payment</p>
             <input 
               type="file" 
               onChange={handleFileInputChange} 
@@ -116,11 +122,12 @@ const CloudinaryUpload = () => {
         </div> 
         )
       }
-
-      <button onClick={handleUploadClick} className="bg-blue-700 rounded py-2 text-white font-bold border my-6">
-      {uploading ? 'Uploading...' : 'Submit'}
+      {success ? (  <button onClick={handleUploadClick} disabled className="bg-green-700 rounded py-2 text-white font-bold border my-6">uploaded </button>
+      ) : ( <button onClick={handleUploadClick} className="bg-blue-700 rounded py-2 text-white font-bold border my-6"> {uploading ? 'Uploading...' : 'Submit'}
       
       </button>
+      )}
+     
   
   
   </div>

@@ -5,7 +5,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { UserTable } from '../sections';
+import { PaymentFile, UserTable } from '../sections';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -45,6 +45,7 @@ function a11yProps(index) {
 const Admin = ({user}) => {
     const [value, setValue] = useState(0);    
     const [data, setData] = useState([]);
+    const [pamentFile, setPamentFile] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -58,37 +59,43 @@ const Admin = ({user}) => {
       const fetchData = async () => {
         try {
             const reponse = await axios.get(`api/user`);
-            
-        //    console.log(reponse?.data?.data)
             setData(reponse?.data?.data);
           if (!reponse.ok) {
             throw new Error('Request failed');
           }
-          
-          
-      
+
           setIsLoading(false);
         } catch (error) {
           setError(error.message);
           setIsLoading(false);
         }
       };
+
+      const fetchData2 = async () => {
+        try {
+            const reponse = await axios.get(`api/paymentFile`);
+            setPamentFile(reponse?.data?.data);
+          if (!reponse.ok) {
+            throw new Error('Request failed');
+          }
+         
+        } catch (error) {
+          setError(error.message);
+        }
+      };
+
+      fetchData2()
       fetchData();
     }, []);
   
  
   
-  
-  
-
-    console.log(data)
-  
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
+          <Tab label="Candidates" {...a11yProps(0)} />
+          <Tab label="Payment" {...a11yProps(1)} />
           <Tab label="Item Three" {...a11yProps(2)} />
         </Tabs>
       </Box>
@@ -96,7 +103,7 @@ const Admin = ({user}) => {
          <UserTable user={data} />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <PaymentFile data={pamentFile} />
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three

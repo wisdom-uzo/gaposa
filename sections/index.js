@@ -4,6 +4,8 @@ import Explore from './Explore';
 import Reg from './Reg';
 import Layout from './Layout';
 import UserTable from './UserTable';
+import PaymentFile from './PaymentFile';
+
 
 
 export {
@@ -12,6 +14,6 @@ export {
   Explore,
   Reg,
   Layout,
-  UserTable
- 
+  UserTable,
+  PaymentFile
 };

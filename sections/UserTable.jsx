@@ -8,7 +8,7 @@ const UserTable = ({user}) => {
 
     const physical = user?.filter((each) => each.participantType === "Physical")
     const virtual = user?.filter((each) => each.participantType === "virtual")
-    console.log(physical)
+   
   return (
     <div>
     <h1 className=" text-[20px] uppercase font-extrabold">Registeired Candidates</h1>
