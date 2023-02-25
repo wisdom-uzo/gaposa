@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -43,11 +43,45 @@ function a11yProps(index) {
   
 
 const Admin = ({user}) => {
-    const [value, setValue] = useState(0);
+    const [value, setValue] = useState(0);    
+    const [data, setData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
+
 
     const handleChange = (event, newValue) => {
       setValue(newValue);
     };
+
+  
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+            const reponse = await axios.get(`http://localhost:3000/api/user`);
+            
+        //    console.log(reponse?.data?.data)
+            setData(reponse?.data?.data);
+          if (!reponse.ok) {
+            throw new Error('Request failed');
+          }
+          
+          
+      
+          setIsLoading(false);
+        } catch (error) {
+          setError(error.message);
+          setIsLoading(false);
+        }
+      };
+      fetchData();
+    }, []);
+  
+ 
+  
+  
+  
+
+    console.log(data)
   
   return (
     <Box sx={{ width: '100%' }}>
@@ -59,7 +93,7 @@ const Admin = ({user}) => {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-         <UserTable user={user} />
+         <UserTable user={data} />
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two
@@ -75,19 +109,19 @@ export default Admin
 
 
 
-export const getServerSideProps = async ({req, res}) => {
+// export const getServerSideProps = async ({req, res}) => {
 
 
 
   
- const {data} = await axios.get(`http://localhost:3000/api/user`)
- const imagefile = await axios.get(`http://localhost:3000/api/paymentFile`)
+//  const {data} = await axios.get(`http://localhost:3000/api/user`)
+//  const imagefile = await axios.get(`http://localhost:3000/api/paymentFile`)
   
 	
-console.log(imagefile.data.data)
-	return {
-		props: {
-			user: data.data   
-		},
-	}; 
-}
+// console.log(imagefile.data.data)
+// 	return {
+// 		props: {
+// 			user: data.data   
+// 		},
+// 	}; 
+// }
