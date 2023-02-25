@@ -42,7 +42,7 @@ function a11yProps(index) {
 
   
 
-const Index = ({user}) => {
+const Admin = ({user}) => {
     const [value, setValue] = useState(0);
 
     const handleChange = (event, newValue) => {
@@ -71,7 +71,7 @@ const Index = ({user}) => {
   )
 }
 
-export default Index
+export default Admin
 
 
 
@@ -87,7 +87,7 @@ export const getServerSideProps = async ({req, res}) => {
 console.log(imagefile.data.data)
 	return {
 		props: {
-			user: data.data  
+			user: data.data   
 		},
 	}; 
 }
