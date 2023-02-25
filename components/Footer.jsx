@@ -19,7 +19,7 @@ const Footer = () => (
           <div className="">
               
               <img src='logo.png' alt="" className='bg-white rounded-md' />
-              <p className='text-white'>School of science</p>
+              <p className='text-white'>School of science and Technology <br /> Gataway (ICT) Polytechnic Saapade</p>
           </div>
 
           <div className="text-white ">

@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Form from './Form'
 import Timer from './Timer'
 import CloudinaryUpload from './CloudinaryUpload'
+import PdfViewer from './PdfViewer'
 
 export {
   Navbar,
@@ -12,5 +13,6 @@ export {
   Footer,
   Form,
   Timer,
-  CloudinaryUpload
+  CloudinaryUpload,
+  PdfViewer
 };

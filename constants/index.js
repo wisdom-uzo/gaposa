@@ -18,11 +18,11 @@ export const insights = [
   },
   {
     imgUrl: '/arg.jpeg',
-    title: 'Aquaculture and the Blue Economy',
+    title: 'Aquaculture and the Food security',
   },
   {
     imgUrl: '/medicine.jpeg',
-    title: 'Medicinal plants / Drug development',
+    title: 'Drugs and Pharmaceutical Development',
   },
   {
     imgUrl: '/climate-change.jpg',
