@@ -75,19 +75,19 @@ export default Admin
 
 
 
-//export const getServerSideProps = async ({req, res}) => {
+export const getServerSideProps = async ({req, res}) => {
 
 
 
   
-//  const {data} = await axios.get(`http://localhost:3000/api/user`)
-//  //const imagefile = await axios.get(`http://localhost:3000/api/paymentFile`)
+ const {data} = await axios.get(`http://localhost:3000/api/user`)
+ const imagefile = await axios.get(`http://localhost:3000/api/paymentFile`)
   
 	
-// console.log(imagefile.data.data)
-// 	return {
-// 		props: {
-// 			user: data.data   
-// 		},
-// 	}; 
-// }
+console.log(imagefile.data.data)
+	return {
+		props: {
+			user: data.data   
+		},
+	}; 
+}
