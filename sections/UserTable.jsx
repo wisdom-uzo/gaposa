@@ -11,6 +11,7 @@ const UserTable = ({user}) => {
     console.log(physical)
   return (
     <div>
+    <h1 className=" text-[20px] uppercase font-extrabold">Registeired Candidates</h1>
     {
         user ? (<div className='grid grid-cols-2 gap-4 '>
         <Paper elevation={2} className="p-3">

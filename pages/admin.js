@@ -57,7 +57,7 @@ const Admin = ({user}) => {
     useEffect(() => {
       const fetchData = async () => {
         try {
-            const reponse = await axios.get(`http://localhost:3000/api/user`);
+            const reponse = await axios.get(`api/user`);
             
         //    console.log(reponse?.data?.data)
             setData(reponse?.data?.data);
