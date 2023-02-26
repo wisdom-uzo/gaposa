@@ -6,7 +6,7 @@ import Timer from './Timer'
 import CloudinaryUpload from './CloudinaryUpload'
 import PdfViewer from './PdfViewer'
 
-export {
+export {                                                                             
   Navbar,
   TitleText,
   TypingText,

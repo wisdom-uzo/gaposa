@@ -9,7 +9,7 @@ const documentUrl = "https://res.cloudinary.com/dkukvhd6b/image/upload/v16773279
 const CloudinaryDocument = () => {
   const cld = new Cloudinary({
     cloud: {
-      cloudName: 'dkukvhd6b',
+      cloudName: 'dkukvhd6b',  
     },
   });
 

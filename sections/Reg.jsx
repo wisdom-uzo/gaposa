@@ -7,9 +7,16 @@ const Reg = () => {
     <h1 className='md:text-[3em] text-[2em] text-center text-white font-extrabold'>Register with us.</h1>
 
     
-    <div className=" md:w-[70%] w-[90%] shadow-md text-gray-800 bg-white mx-auto mt-10 rounded-md p-5 leading-8 font-semibold text-[20px]">
-        <p>The registration fee covering the cost of conference materials, lunch and tea breaks is N25, 000.00. The registration for international paticipant is $100. The registration fee for students who are not academic staff and with identity cards is N15,000.00.</p>
-        <p className='mt-4'>The registration fee for international student is $50. Please pay the registration fee to the conference account ( Name of account: University of Ibadan, Faculty of Science Alumni Association, Bank: Union Bank, Account Number: 0109363898) and upload the receipt of your payment. Only registered participants and invited guests will be allowed into the conference venue. Submit your registration fee receipt
+    <div className=" md:w-[70%] w-[90%] shadow-md text-gray-700 bg-white mx-auto mt-10 rounded-md p-5 leading-8 text-base text-justify ">
+        <p>The registration fee for this Conference is fifteen thousand naira (N15,000) for physical participation and ten thousand naira(N10,000) for virtual participation. The physical participation lunch cost shall cover Conference materials, lunch and light breakfast on day 2. Registration for international participants is $100 while student registration is five thousand naira (N5,000) only. You may please pay the registration fee to:</p>
+          
+        <div className="mt-2">
+            <p className=""><strong>Account Name: </strong>GAPOSA SS&T CONFERENCE AND JOURNAL</p>
+            <p><strong>Account Number </strong>: 1226078857</p>
+            <p><strong>Bank:</strong>ZENITH BANK.</p>
+        </div>
+        
+        <p className='mt-2'>Kindly upload the receipt of your payment once done. Please note that only registered participants and invited guests shall be allowed into the venue. Upload your registration fee receipt 
         <Link href='/clearance'> <span className='font-bold text-red-600'>here</span></Link> </p>
     </div>
 
