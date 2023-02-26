@@ -25,9 +25,9 @@ const contact = () => {
           </div> 
 
 
-          <div className="px-5">
-          <form>
-          <h1 className='font-bold text-[20px] mb-2'>send massage</h1>   
+          <div className="px-5 mt-5">
+          <form >
+          <h1 className='font-bold text-[20px] mb-7'>Send massage</h1>   
 
           <div className='mb-2'>
             <Typography className=''>Name</Typography>
@@ -46,27 +46,31 @@ const contact = () => {
               id="email"
               type="email"
               variant="outlined"
-              className=''
+              className='w-full'
+              size='small'
               required
             />
           </div>
-          <div className='mb-2'>
+          <div className='mb-5'>
             <Typography className=''>Message</Typography>
             <TextField
               id="message"
               variant="outlined"
-              className=''
+              className='w-full'
+              size='small'
               multiline
               rows={5}
               required
             />
           </div>
+
           <button
             type="submit"
-            className='w-full bg-blue-700 rounded mt-5 text-white py-1'
+            className='w-full bg-blue-700 rounded mb-5 text-white py-2'
           >
             Submit
           </button>
+
         </form>
           </div>
       
