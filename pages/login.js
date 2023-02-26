@@ -37,7 +37,7 @@ const Login = () => {
     if (email === 'admin@gmail.com' && password === 'password123') {
       // Save the data to localhost or perform any other action
       router.push('/admin')
-      localStorage.setItem('loggedIn', 'true');
+      localStorage.setItem('adminLoggedIn', 'true');
       setEmail('');
       setPassword('');
       setErrorMessage('');

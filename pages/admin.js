@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { PaymentFile, UserTable } from '../sections';
 import { PdfViewer } from '../components';
+import { useRouter } from 'next/router';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -50,13 +51,27 @@ const Admin = ({user}) => {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    
 
+    
+
+     
+
+    
     const handleChange = (event, newValue) => {
       setValue(newValue);
     };
-
-  
+    
+   
+    const router = useRouter()
     useEffect(() => {
+
+      const check =  localStorage.getItem('adminLoggedIn')
+      if(!check) {
+        router.push('/login')
+      }
+
+
       const fetchData = async () => {
         try {
             const reponse = await axios.get(`api/user`);

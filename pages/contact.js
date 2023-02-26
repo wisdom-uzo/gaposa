@@ -35,7 +35,7 @@ const contact = () => {
             <TextField
               id="name"
               variant="outlined"
-              required
+              required 
               className='w-full'
               size='small'
             />
