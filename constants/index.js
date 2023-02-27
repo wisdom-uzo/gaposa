@@ -34,17 +34,21 @@ export const socials = [
   {
     name: 'twitter',
     url: '/twitter.svg',
+    link: 'https://twitter.com/gaposastconf'
   },
   {
     name: 'linkedin',
     url: '/linkedin.svg',
+    link: '#'
   },
   {
     name: 'instagram',
     url: '/instagram.svg',
+    link: 'https://www.instagram.com/gaposastconf/'
   },
   {
     name: 'facebook',
     url: '/facebook.svg',
+    link: '#'
   },
 ];

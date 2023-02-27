@@ -54,8 +54,14 @@ const Admin = ({user}) => {
     
 
     
+    
+    const payment = pamentFile?.filter(each => each.submissonType === "Registration")
+    const manuscript = pamentFile?.filter(each => each.submissonType === "Manuscript")
 
-     
+    const advert = pamentFile?.filter(each => each.submissonType === "Advert")
+    const exhibition = pamentFile?.filter(each => each.submissonType === "Exhibition")
+
+    
 
     
     const handleChange = (event, newValue) => {
@@ -112,17 +118,26 @@ const Admin = ({user}) => {
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab label="Candidates" {...a11yProps(0)} />
           <Tab label="Payment" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="Manuscript" {...a11yProps(2)} />
+          <Tab label="Exhibition" {...a11yProps(3)} />
+          <Tab label="Advert" {...a11yProps(4)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
          <UserTable user={data} />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <PaymentFile data={pamentFile} />
+        <PaymentFile dataType={'Payment'} data={payment} />
       </TabPanel>
       <TabPanel value={value} index={2}>
+        <PaymentFile dataType={'Manuscript'} data={manuscript} />
       </TabPanel>
+      <TabPanel value={value} index={3}>
+        <PaymentFile dataType={'Exhibition'} data={exhibition} />
+      </TabPanel>
+      <TabPanel value={value} index={4}>
+      <PaymentFile dataType={'Advert'} data={advert} />
+    </TabPanel>
     </Box>
   )
 }

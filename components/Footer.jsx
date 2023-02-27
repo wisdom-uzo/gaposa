@@ -41,7 +41,7 @@ const Footer = () => (
               <h3>SOCIAL</h3>
               <div className="flex gap-4">
               {socials.map((item, index) => (
-                <p key={index}>  <Link href="#"> <img src={item.url} alt="" /> </Link></p>
+                <p key={index}>  <Link href={item.link}> <img src={item.url} alt="" /> </Link></p>
               ))}
               </div>
               <p>Visits: 2925</p>

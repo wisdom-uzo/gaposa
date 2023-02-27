@@ -21,7 +21,7 @@ const Navbar = () => {
           <ul className='flex gap-3 items-center'>
               <li><Link href='/'>Home</Link></li>
               <li><Link href='/contact'>Contact Us</Link></li>
-              <li><Link href='/'>Accomodation</Link></li>
+              <li><Link href='/accomodation'>Accomodation</Link></li>
               <li><Link href='/register'>Register</Link></li>
               <li>
                 <Link href='clearance'>Clearance</Link>
@@ -52,7 +52,7 @@ const Navbar = () => {
     <ul className='flex flex-col font-semibold uppercase gap-5 w-full'>
         <li><Link href='/'>Home</Link></li>
         <li><Link href='/contact'>Contact Us</Link></li>
-        <li><Link href='/'>Accomodation</Link></li>
+        <li><Link href='/accomodation'>Accomodation</Link></li>
        
         <li>
           <Link href='clearance'>Clearance</Link>
