@@ -19,7 +19,7 @@ const contact = () => {
               
               <div className="mt-5">
               <p><Email /> : gaposastconf@gmail.com</p>          
-              <p><Phone />  : +234 8062618986, +234 806043456</p>
+              <p><Phone />  : +234 8062618986, +234 8060434569</p>
               </div>
               
           </div> 

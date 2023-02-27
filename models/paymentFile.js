@@ -1,8 +1,12 @@
 import mongoose from 'mongoose'
 
 const PaymentFile = new mongoose.Schema({
-  paymentFileLink: { type: String, required: true  },
+  paymentFileLink: {
+    image1: { type: String },
+    image2: { type: String }
+  },
   email: { type: String, required: true },
+  submissonType:{ type: String, required: true },
  
 },
   {timestamps: true}

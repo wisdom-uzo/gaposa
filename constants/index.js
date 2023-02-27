@@ -18,15 +18,15 @@ export const insights = [
   },
   {
     imgUrl: '/arg.jpeg',
-    title: 'Aquaculture and the Food security',
+    title: 'Aquaculture and the Food Security',
   },
   {
     imgUrl: '/medicine.jpeg',
     title: 'Drugs and Pharmaceutical Development',
   },
-  {
+  { 
     imgUrl: '/climate-change.jpg',
-    title: 'Climatic change and human health',
+    title: 'Climatic change and Human health', 
   },
 ];
 
