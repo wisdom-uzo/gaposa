@@ -3,11 +3,11 @@ import { TitleText } from './CustomTexts';
 
 function Schedule() {
   return (
-    <section className="bg-gray-100 py-12 px-4">
+    <section className="bg-gray-100 py-12 px-5">
       <div className="container mx-auto">
       <TitleText title={<>Programme</>} textStyles='text-center' />
 
-        <h2 className="">Programme</h2>
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md">
             <div className="px-6 py-4 bg-blue-500 text-white font-bold rounded-t-lg">

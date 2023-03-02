@@ -25,15 +25,15 @@ const Footer = () => (
           <div className="text-white ">
               <h3>QUICK LINK</h3>
               <p><Link href="#">Home</Link></p>
-              <p><Link href="#">Abstract Submission</Link></p>
-              <p><Link href="#">Home</Link></p>
+              <p><Link href="/abstract">Abstract Submission</Link></p>
+              <p><Link href="/register">Register</Link></p>
           </div>
 
           <div className="text-white ">
-              <h3>QUICK LINK</h3>
-              <p><Link href="#">Home</Link></p>
-              <p><Link href="#">Abstract Submission</Link></p>
-              <p><Link href="#">Home</Link></p>
+              <h3>OTHER LINK</h3>
+              <p><Link href="/accomodation">Accomodation</Link></p>
+              <p><Link href="/clearance">Clearance</Link></p>
+              <p><Link href="/contact">Contact us</Link></p>
           </div>
 
 

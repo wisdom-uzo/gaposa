@@ -5,7 +5,7 @@ import { TitleText } from './CustomTexts';
 
 function Pricing() {
   return (
-    <section className="bg-gray-100 py-12 px-4">
+    <section className="bg-gray-100 py-12 px-5">
       <div className="container mx-auto">
       <TitleText title={<>REGISTRATION FEE</>} textStyles='text-center' />
 

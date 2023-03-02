@@ -8,7 +8,7 @@ const Reg = () => {
 
     
     <div className=" md:w-[70%] w-[90%] shadow-md text-gray-700 bg-white mx-auto mt-10 rounded-md p-5 leading-8 text-base text-justify ">
-        <p>The registration fee for this Conference is fifteen thousand naira (N15,000) for physical participation and ten thousand naira(N10,000) for virtual participation. The physical participation lunch cost shall cover Conference materials, lunch and light breakfast on day 2. Registration for international participants is $100 while student registration is five thousand naira (N5,000) only. You may please pay the registration fee to:</p>
+        <p>The registration fee for this Conference is fifteen thousand naira (N15,000) for physical participation and ten thousand naira(N10,000) for virtual participation. Please note that late submission of papers shall attract an additional fee of five thousand naira (N5,000).The physical participation cost shall cover Conference materials, lunch and light breakfast on day 2. Registration for international participants is $100 while student registration is five thousand naira (N5,000) only. You may please pay the registration fee to:</p>
           
         <div className="mt-2">
             <p className=""><strong>Account Name: </strong>GAPOSA SS&T CONFERENCE AND JOURNAL</p>
