@@ -8,9 +8,9 @@ import { fadeIn, staggerContainer } from '../utils/motion';
 
 function Pricing() {
   return (
-    <section className="bg-gray-100 py-12">
+    <section className="bg-gray-100 px-5 py-12">
     <motion.div
-    className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}
+    className={`${styles.innerWidth} ${styles.flexCenter} flex-col`}
     variants={staggerContainer}
     initial='hidden'
     whileInView='show'
@@ -21,7 +21,7 @@ function Pricing() {
         lassName="container mx-auto">
         <TitleText title={<>REGISTRATION FEE</>} textStyles='text-center' />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
             <div className="bg-white rounded-lg shadow-md">
                 <div className="px-6 py-4">
                 <div className="flex items-center mb-4">
