@@ -95,7 +95,7 @@ const Abstract = () => {
     <Paper className="w-full md:w-[70%] mx-auto my-10 p-5" elevation={5}>
     <form action="" onSubmit={handleSubmit}>
       <h1 className="text-center my-7 font-semibold uppercase text-[24px]">
-        Register Here
+      Submit your Abstract
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <TextField
