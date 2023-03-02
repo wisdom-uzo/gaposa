@@ -45,35 +45,7 @@ const About = () => (
     </motion.div>
 
 
-    <div className="">
-     <TitleText title={<>REGISTRATION FEE</>} textStyles='text-center' />
-
-     <Paper elevation={3} className="p-2 grid gap-3 text-center mt-5 md:grid-cols-4">
-
-        <Paper elevation={3} className="p-2">
-            <p className="">LOCAL</p>
-            <p className="">N15,000</p>
-        </Paper>
-
-        <Paper elevation={3} className="p-2">
-        <p className="">Virtual</p>
-        <p className="">N10,000</p>
-        </Paper>
-
-        <Paper elevation={3} className="p-2">
-        <p className="">international</p>
-        <p className="">$100</p>
-        </Paper>
-
-        <Paper elevation={3} className="p-2">
-        <p className="">Students</p>
-        <p className="">N5,000</p>
-        </Paper>
-
-     </Paper>
-     
     
-    </div>
 
   </section>
 );

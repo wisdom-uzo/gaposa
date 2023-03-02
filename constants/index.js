@@ -18,7 +18,7 @@ export const insights = [
   },
   {
     imgUrl: '/arg.jpeg',
-    title: 'Aquaculture and the Food Security',
+    title: 'Agriclture and the Food Security',
   },
   {
     imgUrl: '/medicine.jpeg',
@@ -35,11 +35,6 @@ export const socials = [
     name: 'twitter',
     url: '/twitter.svg',
     link: 'https://twitter.com/gaposastconf'
-  },
-  {
-    name: 'linkedin',
-    url: '/linkedin.svg',
-    link: '#'
   },
   {
     name: 'instagram',

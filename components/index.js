@@ -4,7 +4,8 @@ import Footer from './Footer';
 import Form from './Form'
 import Timer from './Timer'
 import CloudinaryUpload from './CloudinaryUpload'
-import PdfViewer from './PdfViewer'
+import Program from './Program'
+import Pricing from './Pricing'
 
 export {                                                                             
   Navbar,
@@ -14,5 +15,6 @@ export {
   Form,
   Timer,
   CloudinaryUpload,
-  PdfViewer
+  Program,
+  Pricing
 };

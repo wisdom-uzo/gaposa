@@ -1,5 +1,5 @@
 import React from 'react'
-import { Timer } from '../components'
+import { Pricing, Program, Timer } from '../components'
 import { About, Explore, Hero, Layout } from '../sections'
 
 
@@ -10,6 +10,8 @@ const Index = () => {
         <Hero />
         <Timer />
         <About />
+        <Program />
+        <Pricing />
         <Explore />
       
     </div>

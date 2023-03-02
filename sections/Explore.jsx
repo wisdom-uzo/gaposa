@@ -26,7 +26,7 @@ const Explore = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {insights.map((world, index) => (
                   <div className="text-center shadow-lg" key={index} >
-                    <img alt={world.title} src={world.imgUrl} className='w-full h-[20rem]' />
+                    <img alt={world.title} src={world.imgUrl} className='w-full ' />
                     <p className='my-3 font-semibold text'>{world.title}</p>
                   </div>
                 ))}
