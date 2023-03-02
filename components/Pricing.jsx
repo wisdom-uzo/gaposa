@@ -8,7 +8,7 @@ import { fadeIn, staggerContainer } from '../utils/motion';
 
 function Pricing() {
   return (
-    <section className="bg-gray-100 py-12 px-5">
+    <section className="bg-gray-100 py-12">
     <motion.div
     className={`${styles.innerWidth} mx-auto ${styles.flexCenter} flex-col`}
     variants={staggerContainer}
