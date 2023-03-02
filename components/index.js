@@ -5,7 +5,8 @@ import Form from './Form'
 import Timer from './Timer'
 import CloudinaryUpload from './CloudinaryUpload'
 import Program from './Program'
-import Pricing from './Pricing'
+import Pricing from './Pricing' 
+import AdminSidebar from './AdminSidebar' 
 
 export {                                                                             
   Navbar,
@@ -16,5 +17,6 @@ export {
   Timer,
   CloudinaryUpload,
   Program,
-  Pricing
+  Pricing,
+  AdminSidebar
 };
