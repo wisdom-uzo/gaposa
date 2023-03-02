@@ -18,7 +18,7 @@ export const insights = [
   },
   {
     imgUrl: '/arg.jpeg',
-    title: 'Agriclture and the Food Security',
+    title: 'Agriculture and Food Security',
   },
   {
     imgUrl: '/medicine.jpeg',
