@@ -4,6 +4,7 @@ import { TitleText } from './CustomTexts';
 import { motion } from 'framer-motion';
 import styles from '../styles';
 import { fadeIn, staggerContainer } from '../utils/motion';
+import Link from 'next/link';
 
 
 function Pricing() {
@@ -18,7 +19,7 @@ function Pricing() {
 
     <motion.div
         variants={fadeIn('up', 'tween', 0.2, 1)}
-        lassName="container mx-auto">
+        className="container mx-auto flex flex-col justify-center items-center">
         <TitleText title={<>REGISTRATION FEE</>} textStyles='text-center' />
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
@@ -63,6 +64,12 @@ function Pricing() {
                 </div>
             </div>
             </div>
+
+            <motion.p style={{padding:'8px 0'}} className=" font-bold w-[80%] text-center mt-5 shadow-md rounded-md bg-white "
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}>
+                <Link className='px-5' href='/register'>Register Here</Link>
+            </motion.p>
         </motion.div>
 
 
