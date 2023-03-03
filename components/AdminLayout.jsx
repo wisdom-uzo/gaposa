@@ -25,7 +25,7 @@ const [showSidebar, setShowSidebar] = useState(false);
             <div className="mt-10 flex flex-col justify-center items-center">
               <ul className=" flex flex-col gap-3 justify-center">
                 <li>
-                  <Link href="">
+                  <Link href="/adminpage/participantTable">
                     <People /> Registeired Users
                   </Link>
                 </li>
@@ -60,7 +60,10 @@ const [showSidebar, setShowSidebar] = useState(false);
               <Logout />
             </div>
           </div>
-          {children}
+          <div className=" bg-gray-200 h-screen p-2">
+             {children}
+          </div>
+          
         </div>
 
 
