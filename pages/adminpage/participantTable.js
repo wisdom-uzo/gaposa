@@ -1,9 +1,10 @@
 import { ExpandMore } from "@mui/icons-material";
-import { Accordion, AccordionDetails, AccordionSummary, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, List, ListItem, ListItemText, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
 import axios from "axios";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import AdminLayout from "../../components/AdminLayout";
+import CardTable from "../../components/CardTable";
 
 
 
@@ -35,11 +36,13 @@ function ParticipantTable() {
 
     const fetchData = async () => {
       try {
-          const reponse = await axios.get(`https://www.gaposastconf.org/api/user`);
+        //  const reponse = await axios.get(`https://www.gaposastconf.org/api/user`);
+        const reponse = await axios.get(`api/user`);
+
           console.log(reponse);
           setData(reponse?.data?.data);
         if (!reponse.ok) {
-          throw new Error('Request failed');
+          throw new Error('Request failed');   
         }
       } catch (error) {
         console.log(error);
@@ -53,39 +56,96 @@ function ParticipantTable() {
 
   return (
     <AdminLayout>
-    <div className="">
-      <Paper elevation={4} className="">
-        {data?.map((a, i) => (
-          <Accordion
-            key={i}
-            expanded={expanded === i}
-            onChange={handleChange(i)}
+    <div
+    className={
+      "relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-white"}
+  >
+    <div className="rounded-t mb-0 px-4 py-3 border-0">
+      <div className="flex flex-wrap items-center">
+        <div className="relative w-full px-4 max-w-full flex-grow flex-1">
+          <h3
+            className={
+              "font-semibold text-lg "}
           >
-            <AccordionSummary
-              expandIcon={<ExpandMore />}
-              aria-controls="panel1bh-content"
-              id="panel1bh-header"
-            >
-              <Typography sx={{ color: "text.secondary", paddingRight: "5px" }}>
-                {i + 1}
-              </Typography>
-              <Typography sx={{ width: "33%", flexShrink: 0 }}>
-                {a.firstName} {a.lastName} {a.otherName ? a.otherName : ""}
-              </Typography>
-              <Typography sx={{ color: "text.secondary"}}>
-                {a.email}
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                Nulla facilisi. Phasellus sollicitudin nulla et quam mattis
-                feugiat. Aliquam eget maximus est, id dignissim quam.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-        ))}
-      </Paper>
+            Card Tables
+          </h3>
+        </div>
+      </div>
     </div>
+    <div className="block w-full overflow-x-auto">
+      {/* Projects table */}
+      <table className="items-center w-full bg-transparent border-collapse">
+        <thead>
+          <tr>
+            <th
+              className={
+                "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left "
+              }
+            >
+              Full Name
+            </th>
+            <th
+              className={
+                "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left "
+              }
+            >
+              Email
+            </th>
+            <th
+              className={
+                "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left "}
+            >
+              Status
+            </th>
+            <th
+              className={
+                "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left "}
+            >
+              Users
+            </th>
+            <th
+              className={
+                "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left "}
+            >
+              Completion
+            </th>
+            <th
+              className={
+                "px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left "}
+            ></th>
+          </tr>
+        </thead>
+        <tbody>
+          {data?.map((item, index) => (
+            <tr key={index}>
+              <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
+                <span className={"font-bold "}>Argon Design System</span>
+              </th>
+              <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                wisdomUzodimna@gmail.com
+              </td>
+              <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <i className="fas fa-circle text-orange-500 mr-2"></i>{" "}
+                pending
+              </td>
+              <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                hello
+              </td>
+              <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                hello
+              </td>
+              <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
+                hell
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+     
     </AdminLayout>
   );
 }

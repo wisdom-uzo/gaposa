@@ -1,5 +1,5 @@
 import AdminSidebar from "./AdminSidebar";
-import { Dashboard, DashboardCustomize, ExitToApp, Logout, MenuOpen, People, Receipt, Settings } from "@mui/icons-material";
+import { Dashboard, DashboardCustomize, DashboardCustomizeSharp, ExitToApp, Logout, MenuOpen, People, Receipt, ReceiptLongOutlined, Settings } from "@mui/icons-material";
 import Link from "next/link";
 import React, { useState } from "react";
 import { Avatar } from "@mui/material";
@@ -14,42 +14,42 @@ const [showSidebar, setShowSidebar] = useState(false);
 
 
     return (
-      <div className=" relative overflow-hidden flex h-screen w-full">
+      <div className=" relative overflow-hidden  grid grid-cols-1 md:grid-cols-[17%,83%] h-screen w-full ">
         
-          <div className="bg-black h-screen hidden md:block text-white  md:w-1/5 w-1/2 transition-all duration-300 ease-in-out">
+          <div className="bg-black h-screen hidden md:block text-white  md:w-full transition-all duration-300 ease-in-out">
             <div className=" flex items-center gap-2 justify-center h-16 w-full bg-black">
               <DashboardCustomize />
-              <h1>Admin Dashboard</h1>
+              <h1>Admin Page</h1>
             </div>
 
             <div className="mt-10 flex flex-col justify-center items-center">
-              <ul className=" flex flex-col gap-3 justify-center">
+              <ul className=" flex flex-col gap-5 justify-center">
+
+              <li>
+                  <Link href="/admin">
+                    <DashboardCustomizeSharp /> Dashboard
+                  </Link>
+                </li>
                 <li>
-                  <Link href="/adminpage/participantTable">
+                  <Link href="/userTable">
                     <People /> Registeired Users
                   </Link>
                 </li>
                 <li>
-                  <Link href="">
+                  <Link href="/document">
                     {" "}
-                    <Receipt /> Payment receipt
+                    <Receipt /> Documents
                   </Link>
                 </li>
                 <li>
-                  <Link href="">Registeired Users</Link>
-                </li>
-                <li>
-                  <Link href="">Registeired Users</Link>
-                </li>
-                <li>
-                  <Link href="">Registeired Users</Link>
+                  <Link href="abstractTable"><ReceiptLongOutlined/> Abstract</Link>
                 </li>
               </ul>
             </div>
           </div>
         
 
-        <div className="w-full ">
+        <div className="">
           <div className="flex justify-between w-full pr-5 py-2 border-b-4 border-gray-900">
             <button onClick={handleToggleSidebar}>
               <MenuOpen />
@@ -60,7 +60,7 @@ const [showSidebar, setShowSidebar] = useState(false);
               <Logout />
             </div>
           </div>
-          <div className=" bg-gray-200 h-screen p-2">
+          <div className=" bg-gray-200 h-screen p-2 w-full">
              {children}
           </div>
           
@@ -79,27 +79,28 @@ const [showSidebar, setShowSidebar] = useState(false);
               </div>
 
               <div className="mt-10 flex flex-col items-center h-screen">
-                <ul className=" flex flex-col gap-3 justify-center">
-                  <li>
-                    <Link href="">
-                      <People /> Registeired Users
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="">
-                      <Receipt /> Payment receipt
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="">Registeired Users</Link>
-                  </li>
-                  <li>
-                    <Link href="">Registeired Users</Link>
-                  </li>
-                  <li>
-                    <Link href="">Registeired Users</Link>
-                  </li>
-                </ul>
+              <ul className=" flex flex-col gap-5 justify-center">
+
+              <li>
+                  <Link href="/admin">
+                    <DashboardCustomizeSharp /> Dashboard
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/userTable">
+                    <People /> Registeired Users
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/document">
+                    {" "}
+                    <Receipt /> Documents
+                  </Link>
+                </li>
+                <li>
+                  <Link href="abstractTable"><ReceiptLongOutlined/> Abstract</Link>
+                </li>
+              </ul>
               </div>
             </div>
           )}
