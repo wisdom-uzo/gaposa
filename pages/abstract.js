@@ -236,7 +236,7 @@ const Abstract = () => {
 
         <div className="w-full gap-3">
           <p>Download Abstract template</p>
-          <Link className='' href='https://firebasestorage.googleapis.com/v0/b/gaposa-79176.appspot.com/o/files%2FRegister%20on%20website-1.docx?alt=media&token=f81592b4-80c7-4283-84ab-1254c208c4bf'><p className='bg-blue-700 w-full py-2 rounded text-center text-white mt-4'>Click to download template</p> </Link>
+          <Link className='' href='https://firebasestorage.googleapis.com/v0/b/gaposa-79176.appspot.com/o/files%2FGuidelines%20for%20paper%20submission.docx?alt=media&token=3ea5ce7f-a8ce-43d7-bbb1-d4c585881f23'><p className='bg-blue-700 w-full py-2 rounded text-center text-white mt-4'>Click to download template</p> </Link>
         </div>
       
 

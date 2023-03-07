@@ -26,7 +26,7 @@ export const insights = [
   },
   { 
     imgUrl: '/climate-change.jpg',
-    title: 'Climatic change and Human health', 
+    title: 'Pollution, Climate changes and Human health', 
   },
 ];
 

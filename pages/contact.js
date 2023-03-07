@@ -27,7 +27,7 @@ const contact = () => {
 
           <div className="px-5 mt-5">
           <form >
-          <h1 className='font-bold text-[20px] mb-7'>Send massage</h1>   
+          <h1 className='font-bold text-[20px] mb-7'>Send message</h1>   
 
           <div className='mb-2'>
             <Typography className=''>Name</Typography>

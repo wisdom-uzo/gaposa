@@ -111,7 +111,7 @@ const Clearance = () => {
   return (
     <Layout>
 
-    <div className="bg-[url('/registration.jpg')] h-[20rem] flex justify-center font-extrabold items-center text-[25px] bg-black text-white">
+    <div style={{height:'15rem'}} className="bg-[url('/registration.jpg')] h-[20rem] flex justify-center font-extrabold items-center text-[25px] bg-black text-white">
 
     Clearance
     </div>  
@@ -122,7 +122,6 @@ const Clearance = () => {
         label='Email'
         vlaue={email}
         required
-        size='small'
         className='w-full'
         onChange={(e) => setEmail(e.target.value)}
         type='email'/>
@@ -141,7 +140,8 @@ const Clearance = () => {
           
         >
           <MenuItem value='Registration'>Registration</MenuItem>
-          <MenuItem value='Manuscript'>Manuscript</MenuItem>
+          <MenuItem value='Abstract'>Abstract</MenuItem>
+          <MenuItem value='Full Manuscript'>Full Manuscript</MenuItem>
           <MenuItem value='Advert'>Advert</MenuItem>
           <MenuItem value='Exhibition'>Exhibition</MenuItem>
         </Select>
