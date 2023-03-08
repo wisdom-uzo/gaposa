@@ -22,7 +22,7 @@ const Hero = () => (
         <h1 className='text-amber-400 text-center font-extrabold text-[30px] md:text-[58px]'>1st INTERNATIONAL CONFERENCE <br /> ON SCIENCE AND TECHNOLOGY</h1>
        
           
-        <h2 className=' font-sans uppercase font-bold text-[20px] mt-5 md:text-[38px] text-center underline'>18th-21st April, 2023.</h2>
+        <h2 className=' font-sans uppercase font-bold text-[20px] mt-5 md:text-[38px] text-center underline'>30th May - 1st June, 2023.</h2>
         <h2 className=' font-sans uppercase font-bold text-[20px] md:text-[30px] text-center'>THEME: ATTAINING NATIONAL SUSTAINABILITY <br /> THROUGH SCIENCE AND TECHNOLOGY       </h2>
      </div>
 
