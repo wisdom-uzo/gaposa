@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 const CountdownTimer = () => {
   // Set the date to count down to (May 2, 2023)
-  const targetDate = new Date("april 18, 2023 00:00:00").getTime();
+  const targetDate = new Date("may 30, 2023 00:00:00").getTime();
 
   // Initialize the state for the countdown time
   const [countdown, setCountdown] = useState({
