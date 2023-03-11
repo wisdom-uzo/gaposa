@@ -26,6 +26,11 @@ const Navbar = () => {
               <li>
                 <Link href='clearance'>Clearance</Link>
               </li>
+              <li>
+
+                <Link href='/call-for-paper'>Call for paper</Link>
+
+              </li>
           
           </ul>
 
@@ -57,6 +62,12 @@ const Navbar = () => {
         <li>
           <Link href='clearance'>Clearance</Link>
         </li>
+        <li>
+
+                <Link href='/call-for-paper'>Call for paper</Link>
+
+              </li>
+        
 
         <li className='bg-red-600 py-2 rounded '><Link href='/register'>Register</Link></li>
       </ul>
