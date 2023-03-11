@@ -26,9 +26,10 @@ const Footer = () => (
               <h3>QUICK LINK</h3>
               <p><Link href="#">Home</Link></p>
               <p><Link href="/abstract">Abstract Submission</Link></p>
+              <p><Link href="/call-for-paper">Call for Paper</Link></p>
               <p><Link href="/register">Register</Link></p>
           </div>
-
+    
           <div className="text-white ">
               <h3>OTHER LINK</h3>
               <p><Link href="/accomodation">Accomodation</Link></p>
