@@ -1,6 +1,6 @@
 import React from 'react'
 import { Pricing, Program, Timer } from '../components'
-import { About, Explore, Hero, Layout } from '../sections'
+import { About, Explore, Hero, Layout, MeetOurSpeakers } from '../sections'
 
 
 const Index = () => {
@@ -10,7 +10,9 @@ const Index = () => {
         <Hero />
         <Timer />
         <About />
+        
         <Program />
+        <MeetOurSpeakers />
         <Pricing />
         <Explore />
       

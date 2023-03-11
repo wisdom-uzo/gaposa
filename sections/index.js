@@ -5,7 +5,7 @@ import Reg from './Reg';
 import Layout from './Layout';
 import UserTable from './UserTable';
 import PaymentFile from './PaymentFile';
-
+import MeetOurSpeakers from './MeetOurSpeakers';
 
 
 export {
@@ -15,5 +15,6 @@ export {
   Reg,
   Layout,
   UserTable,
-  PaymentFile
+  PaymentFile,
+  MeetOurSpeakers 
 };
