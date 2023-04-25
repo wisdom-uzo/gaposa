@@ -14,7 +14,7 @@ const [showSidebar, setShowSidebar] = useState(false);
 
 
     return (
-      <div className=" relative overflow-hidden  grid grid-cols-1 md:grid-cols-[17%,83%] h-screen w-full ">
+      <div className=" relative grid grid-cols-1 md:grid-cols-[17%,83%] h-screen w-full ">
         
           <div className="bg-black h-screen hidden md:block text-white  md:w-full transition-all duration-300 ease-in-out">
             <div className=" flex items-center gap-2 justify-center h-16 w-full bg-black">
