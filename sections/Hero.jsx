@@ -19,11 +19,11 @@ const Hero = () => (
       <div className="px-5">
         <h1 className=' font-sans uppercase font-bold text-[25px] md:text-[38px] text-center'>the school of science and technology <br /> gateway (ict) polytechnic saapade</h1>
              
-        <h1 className='text-amber-400 text-center font-extrabold text-[30px] md:text-[58px]'>1st INTERNATIONAL CONFERENCE <br /> ON SCIENCE AND TECHNOLOGY</h1>
+        <h1 className='text-amber-400 text-center font-extrabold text-[30px] md:text-[58px]'>2ND INTERNATIONAL CONFERENCE <br /> ON SCIENCE AND TECHNOLOGY</h1>
        
           
-        <h2 className=' font-sans uppercase font-bold text-[20px] mt-5 md:text-[38px] text-center underline'>30th May - 1st June, 2023.</h2>
-        <h2 className=' font-sans uppercase font-bold text-[20px] md:text-[30px] text-center'>THEME: ATTAINING NATIONAL SUSTAINABILITY <br /> THROUGH SCIENCE AND TECHNOLOGY       </h2>
+        <h2 className=' font-sans uppercase font-bold text-[20px] mt-5 md:text-[38px] text-center underline'>20th August - 22ND August, 2024.</h2>
+        <h2 className=' font-sans uppercase font-bold text-[20px] md:text-[30px] text-center'>THEME: GREEN ECONOMY :A MULTIDIMENSIONAL <br /> APPROACH TO SUSTAINABLE DEVELOPMENT   </h2>
      </div>
 
     </motion.div>
